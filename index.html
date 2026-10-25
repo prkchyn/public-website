@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>학교폭발</title>
+
+    <style>
+        .burst {
+            position: fixed;
+            pointer-events: none;
+            font-size: 40px;
+            transform: translate(-50%, -50%);
+            animation: floatUp 1s ease-out forwards;
+            z-index: 9999;
+        }
+
+        @keyframes floatUp {
+            from {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+
+            to {
+                opacity: 0;
+                transform: translate(-50%, -100px) scale(1.5);
+            }
+        }
+
+        img {
+            cursor: pointer;
+        }
+    </style>
+
+    <style>
+        body {
+            background-color: #782011;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>거지학교를폭발시기기❤️‍🩹</h1>
+
+    <p>우석여고가 ㅈ같아? 폭발시켜보자</p>
+
+    <h2>무기</h2>
+    <ul>
+        <li>폭발</li>
+        <li>---</li>
+        <li>---</li>
+    </ul>
+
+    <img 
+        src="images/wooseok.png" 
+        alt="우석여고 위성 사진" 
+        width=600 
+        onclick="burst(event)"
+        style="cursor: pointer;"
+    >
+
+    <br><br>
+
+    <button onclick="alert('폭탄')">
+        클릭해라
+    </button>
+
+    <button onclick="alert('우석??????')">
+        ???
+    </button>
+
+    <script>
+        function burst(event) {
+            const effect = document.createElement("span");
+
+            effect.textContent = "💥"
+
+            effect.style.position = "fixed";
+            effect.style.left = event.clientX + "px";
+            effect.style.top = event.clientY + "px";
+            effect.style.transform = "translate(-50%, -50%)";
+            effect.style.fontSize = "40px";
+            effect.style.pointerEvents = "none";
+            effect.style.zIndex = "99999";
+
+            document.body.appendChild(effect);
+
+            effect.animate([
+                {
+                    transform: "translate(-50%, -50%) scale(0.5)", 
+                    opacity: 1
+                },
+                {
+                    transform: "translate(-50%, -100px) scale(1.5)", 
+                    opacity: 0
+                }
+            ], {
+                duration: 1000, 
+                easing: "ease-out", 
+                fill: "forwards"
+            });
+
+            setTimeout(function() {
+                effect.remove();
+            }, 1000);
+        }       
+    </script>
+</body>
+</html>
