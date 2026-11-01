@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>동기부여 글</title>
+
+    <style>
+        .categories {
+            display: flex;
+            gap: 10px;
+            margin-bottom:20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            background: rgba(255, 255, 255, 0.4)
+        }
+
+        .item {
+            padding: 15px;
+            margin: 8px 0;
+            bckground: #f0f0f0;
+            border-radius: 8px;
+         }
+
+        .categories {
+            padding: 12px 24px;
+
+            color: white;
+            background: rgba(255, 255, 255, 0.12);
+
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 12px;
+
+            backdrop-filter: blur(12px);
+
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .categories:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 5px 20px #a78bfa55;
+        }
+    </style>
+
+    <style>
+        body {
+            background: linear-gradient(
+                180deg, 
+                #a1c4fd,
+                #a4fec5,
+                #c0fbd1,
+                #d0fbc0
+            );
+            background-size: 400% 400%;
+            animation: grandientMove 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+
+    <style>
+        .particles {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        bady {
+            position: relative;
+            z-index: 1;
+        }
+
+        .particles span {
+            position: absolute;
+
+            width: 3px;
+            height: 3px;
+
+            background: white;
+            border-radius: 50%;
+
+            opacity: 0.7;
+            box-shadow: 0 0 15px 3px #b9a5ff;
+
+            animation: float 12s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            80% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-20vh);
+                opacity: 0;
+            }
+        }  
+
+        .particles span:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .particles span:nth-child(2) {
+            left: 25%;
+            animation-delay: 3s;
+        }
+
+        .particles span:nth-child(3) {
+            left: 40%;
+            animation-delay: 6s;
+        }
+
+        .particles span:nth-child(4) {
+            left: 55%;
+            animation-delay: 1s;
+        }
+
+        .particles span:nth-child(5) {
+            left: 70%;
+            animation-delay: 5s;
+        }
+
+        .particles span:nth-child(6) {
+            left: 85%;
+            animation-delay: 2s;
+        }
+
+        .particles span:nth-child(7) {
+            left: 35%;
+            animation-delay: 8s;
+        }
+
+        .particles span:nth-child(8) {
+            left: 90%;
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <h1>동기부여 글들 모음</h1>
+    
+    <p>학업, 인간관계, 자기관리 등</p>
+
+    <div class="categories">
+        <button onclick="showCategory('all')">전체</button>
+        <button onclick="showCategory('study')">학업</button>
+        <button onclick="showCategory('relation')">인간관계</button>
+        <button onclick="showCategory('self')">자기관리</button>
+    </div>
+
+    <div class="item study">파이팅</div>
+    <div class="item study">할 수 있다고 믿는 사람만이 결국 해낸다</div>
+    <div class="item study">지금 흘리는 땀은 내일의 눈물을 막는다</div>
+    <div class="item study">포기하지 마. 끝이 아닌 이상, 기회는 계속돼</div>
+    <div class="item study">1%의 가능성이 있다면 99%의 노력을 해라</div>
+    <div class="item study">걔 보다 대학 못 갈거야? 걔는 이겨야지 ㅋㅋㅋ</div>
+    <div class="item study">성공이란 집중하는 법을 배우는 것이다</div>
+    <div class="item study">어제와 똑같이 살면서 다른 미래를 기대하는 것은 정신병 초기 증세다</div>
+    <div class="item study">걔는 이 순간에도 공부하고 있다</div>
+    <div class="item study">재능탓 하면 네 대학이 높아지니?</div>
+    
+    <div class="item relation">성인되서 볼것도 아니면 그냥 막 미친놈처럼 살아랑</div>
+    <div class="item relation">세상은 넓고 또라이는 많다</div>
+    <div class="item relation">썅년에게 호구가 되며 상처받을 바에 똑같이 맞썅년이 되어라</div>
+    <div class="item relation">사람은 혼자 있을 때 비로소 온전히 자기 자신일 수 있다. 고독을 사랑하지 못한다면, 자유도 사랑하기 어렵다.</div>
+    <div class="item relation">내가 해야 할 일 만이 나의 관심사다. 사람들이 나를 어떻게 생각하는 지는 나의 관심사가 아니다.</div>
+    <div class="item relation">틀리면 틀린 대로. 다르면 다른 대로 굳이 이해하려 애쓰며 살지 말자.</div>
+    <div class="item relation">시간을 내서 내게 오는 사람과 시간이 나서 내게 오는 사람을 구분하라.</div>
+    <div class="item relation">내가 좋아하는 사람에게 쓸 시간도 부족하다</div>
+
+    <div class="item self">먹고 후회하느니 참고 자고 일어나 뿌듯함을 느끼자</div>
+    <div class="item self">꾸준히 운동해라 끊임없이 말고</div>
+
+    <script>
+        function showCategory(category) {
+            const items = document.querySelectorAll('.item');
+
+            items.forEach(item => {
+                if (
+                    category === 'all' ||
+                    item.classList.contains(category)
+                ) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
